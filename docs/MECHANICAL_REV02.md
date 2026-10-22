@@ -17,7 +17,7 @@ The pads, nose chamfer and original lateral latch notches move forward 1.885mm. 
 
 ## Board thickness and manufacturing
 
-The USB Type-C receptacle tongue nominal thickness is about 0.70 +/- 0.05mm. The available JLCPCB two-layer thickness choices 0.6mm and 0.8mm may each have fabrication tolerance +/-0.1mm; thin boards can fit loosely while thicker boards can bind. Manufacturing feasibility and the required thickness are **not verified**. Use ENIG contact finish. Do not use soldermask, silkscreen or extra layers in the contact zone.
+The **nominal PCB thickness baseline is 0.8mm, with two FR-4 copper layers and ENIG contact finish**, for both 14P USB 2.0 and 10P power-only variants. This is the selected design requirement; it is not proof of actual mating. The USB Type-C receptacle tongue nominal thickness is about 0.70 +/- 0.05mm. Before ordering, check fabrication thickness tolerances (e.g. +/-0.1mm where offered), since thicker boards can bind and thinner ones may give poor contact force. External prototype material includes a 0.6mm build and an 0.8mm design reference; here 0.6mm is kept only as a fallback for separate comparative tests, **not as a co-equal baseline**. Manufacturing feasibility and 0.8mm mating/firmware uploading have **not been verified**. Do not add soldermask, silkscreen or extra layers in the contact zone.
 
 ## Electrical pin types (symbol ERC)
 
@@ -33,7 +33,7 @@ The USB Type-C receptacle tongue nominal thickness is about 0.70 +/- 0.05mm. The
 4. Check interruption susceptibility, PCB flex, USB-plug spring latch engagement and tolerance variation.
 5. Open in KiCad 10.x; ensure Edge.Cuts closes only after connection to the main-board outline; perform ERC/DRC and Gerber review.
 
-**These checks are not performed by this change.** Neither 0.6mm nor 0.8mm thickness has been certified suitable.
+**These checks are not performed by this change.** The 0.8mm baseline is a design choice, not proof of mating/contact quality or successful firmware upload. Keep 0.6mm as a nonstandard alternative if testing requires it.
 
 ## Sources
 
