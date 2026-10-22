@@ -1,0 +1,24 @@
+Footprint mechanical and copper-pad geometry:
+  vasya-zh/PCB-Edge-USB-connector-KiCad-library
+  https://github.com/vasya-zh/PCB-Edge-USB-connector-KiCad-library
+  GPL-3.0; license included in licenses/GPL-3.0.txt.
+  Modifications: omitted high-speed and SBU pads, and omitted all USB2 data
+  pads in the power-only variant; reused Edge.Cuts outlines only.
+  No connector-shell, rear solder pad, mounting hole or silkscreen is present.
+
+Symbol source:
+  KiCad official Connector:USB_C_Receptacle_USB2.0_14P
+  https://gitlab.com/kicad/libraries/kicad-symbols
+  KiCad library license CC BY-SA 4.0.
+  Modifications: removed inapplicable shell pin S1; removed data pins
+  from the power-only variant; assigned custom PCB-edge footprint.
+
+Source used to retrieve official KiCad embedded symbol geometry:
+  denorath-sys/gridnet, hardware/pcb/main-board/main-board.kicad_sch.
+  No unrelated schematic content included.
+
+Additional comparison:
+  AnasMalas/pcb-edge-usb-c (CC0-1.0)
+  https://github.com/AnasMalas/pcb-edge-usb-c
+
+The original physical board/cable mating dimensions must be tested before production.
