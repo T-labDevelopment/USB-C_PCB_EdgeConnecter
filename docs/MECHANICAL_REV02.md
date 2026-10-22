@@ -1,5 +1,7 @@
 # Rev0.2: Mechanical extension and validation requirements
 
+> **Updated interpretation (2026-10-23 audit):** the 6.20 +/- 0.20mm cited below is the USB Type-C **receptacle effective shell length**, NOT a specified exposed PCB tongue protrusion. The 6.200mm geometry is retained as a **provisional experimental dimension**, pending cable insertion and pad-contact tests. Nominal 0.8mm FR-4 also differs from the USB-IF nominal 0.70 +/- 0.05mm tongue thickness and should not be called USB mechanically compliant. See [PRIOR_ART_AUDIT_2026-10-23.md](PRIOR_ART_AUDIT_2026-10-23.md).
+
 ## Geometry (millimeters)
 
 | Dimension | Rev0.1 | Rev0.2 |
