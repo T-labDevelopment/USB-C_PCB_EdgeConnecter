@@ -67,3 +67,10 @@
 - https://github.com/AnasMalas/pcb-edge-usb-c
 - https://github.com/settinger/USB-C_PCB_experiments
 - https://jlcpcb.com/help/article/jlcpcb-gold-fingers
+
+## Rev.0.4の追加調査・実施状況（2026-10-23）
+
+- 通常のJLCPCBルーター加工の銅箔／切削エッジ間クリアランス≧0.20mmに対し、現行GNDパッドと凹部Edge.Cutsの計算上の距離は**0.17mm**で**0.03mm不足**します。この値は要製造相談です。
+- 14P/10PのF.Cu/B.Cu側面に4か所のKeepout Rule Areaを加え、ラッチ部へ新たな配線・ビア・銅箔ベタが流入しないようにしました。**元パッドの側面クリアランス不足そのものは解消していません**。
+- KiCad 10のCLIヘッドレスDRCでKeepout検出を欠く報告あり。実PCB配置と目視およびERC/DRCでの確認は未実施です。
+- 詳しくは `docs/FOOTPRINT_SAFETY_REV04.md`。
