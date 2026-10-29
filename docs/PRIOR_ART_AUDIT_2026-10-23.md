@@ -74,3 +74,7 @@
 - 14P/10PのF.Cu/B.Cu側面に4か所のKeepout Rule Areaを加え、ラッチ部へ新たな配線・ビア・銅箔ベタが流入しないようにしました。**元パッドの側面クリアランス不足そのものは解消していません**。
 - KiCad 10のCLIヘッドレスDRCでKeepout検出を欠く報告あり。実PCB配置と目視およびERC/DRCでの確認は未実施です。
 - 詳しくは `docs/FOOTPRINT_SAFETY_REV04.md`。
+
+## 2026-10-29 原案試験条件の再確認
+
+原典 `Media/readme.md` により、AnasMalas実験基板は**0.6mm・4層・ENIG・JLCPCB JLC04061H-2116**であると特定できた。原案の0.8mmは利用可能な設計候補であって、2層0.8mmの動作試験結果ではない。摩耗・曲げ・5A通電試験の条件とRev.0.4との差異を `ANASMALAS_SOURCE_CHECK_2026-10-29.md` に記録した。
