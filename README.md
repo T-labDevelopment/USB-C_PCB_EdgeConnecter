@@ -1,5 +1,13 @@
 # USB-C PCB Edge / KiCad 10 / Rev.0.4
 
+## 2026-11-10 実証用ボード Rev.T1 — 構成・試験準備（作業ブランチ）
+
+- [Rev.T1 試験基板構成案](testboard/REV_T1_PLAN.md)：14P通信版と10P非規格給電版の独立クーポン、0.8mm/2層/ENIG、CC抵抗と測定ヘッダ、USB Deviceを用いた通信試験。
+- [実測記録テンプレート](testboard/TEST_RECORD_TEMPLATE.csv)：基板個体・ケーブル・表裏ごとの結果記録。
+- [製造照会事項](testboard/FAB_DFM_INQUIRY.md)：0.17mmエッジクリアランス、Gold Fingers仕様・寸法・切削加工の確認。
+- **現時点では構成検討まで。KiCad回路図/PCB/Gerber未作成、ERC/DRC/製造承認/実機試験は未実施。** 現行Rev.0.4のフットプリント自体には変更を加えない。
+
+
 基板に直接形成するUSB Type-C受け口です。ESP32の組立時USB書き込み、および簡易電源を目的とします。シルク印刷による補強、後端取付端子、固定穴はありません。
 
 ## 2026-10-29 AnasMalas原設計の実験条件を再確認
