@@ -1,0 +1,13 @@
+BoardType,BoardID,PCB_Revision,ActualThickness_mm,InsertionLength_mm,CableMaker_Model,PlugOrientation,MechanicalFit,ContactGrip,VBUS_GND_Short,CC1_GND_Ohm,CC2_GND_Ohm,VBUS_V,CC_ActiveSide,USB_DeviceModel,USB_Enumeration,USB_TransferOrSerial,VisualDamage,PhotoLogLink,Result,Notes
+T1-14P,T1-14P-01,Rev.T1,,,,A,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-01,Rev.T1,,,,B,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-01,Rev.T1,,,,A,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-01,Rev.T1,,,,B,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-02,Rev.T1,,,,A,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-02,Rev.T1,,,,B,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-02,Rev.T1,,,,A,,,,,,,,,,,,,NOT_TESTED,
+T1-14P,T1-14P-02,Rev.T1,,,,B,,,,,,,,,,,,,NOT_TESTED,
+T1-10P,T1-10P-01,Rev.T1,,,,A,,,,,,,,NA,NA,,,NOT_TESTED,
+T1-10P,T1-10P-01,Rev.T1,,,,B,,,,,,,,NA,NA,,,NOT_TESTED,
+T1-10P,T1-10P-01,Rev.T1,,,,A,,,,,,,,NA,NA,,,NOT_TESTED,
+T1-10P,T1-10P-01,Rev.T1,,,,B,,,,,,,,NA,NA,,,NOT_TESTED,
