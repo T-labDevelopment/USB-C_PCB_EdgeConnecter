@@ -1,14 +1,13 @@
 # USB-C PCB Edge / KiCad 10 / Rev.0.4
 
-## 2026-11-10 実証用ボード Rev.T1 — 構成・試験準備（作業ブランチ）
+## 2026-11-10 実証用ボード Rev.T1 — 1枚PCB・左右2コネクタ・LED/USB通信試験
 
-- [Rev.T1 試験基板構成案](testboard/REV_T1_PLAN.md)：14P通信版と10P非規格給電版の独立クーポン、0.8mm/2層/ENIG、CC抵抗と測定ヘッダ、USB Deviceを用いた通信試験。
-- [実測記録テンプレート](testboard/TEST_RECORD_TEMPLATE.csv)：基板個体・ケーブル・表裏ごとの結果記録。
-- [製造照会事項](testboard/FAB_DFM_INQUIRY.md)：0.17mmエッジクリアランス、Gold Fingers仕様・寸法・切削加工の確認。
-- **現時点では構成検討まで。KiCad回路図/PCB/Gerber未作成、ERC/DRC/製造承認/実機試験は未実施。** 現行Rev.0.4のフットプリント自体には変更を加えない。
-
-
-基板に直接形成するUSB Type-C受け口です。ESP32の組立時USB書き込み、および簡易電源を目的とします。シルク印刷による補強、後端取付端子、固定穴はありません。
+- [Rev.T1 単一基板の回路・配置構成](testboard/REV_T1_PLAN.md)：**60×50mm（暫定）の1枚のPCB両端**へ14P USB2と10P給電エッジを1個ずつ。独立5V/GND、LED3個とWCH CH340N SOP-8によるUSB UART/RTS試験を計画。
+- [BOM（1枚構成）](testboard/BOM_REV_T1_SINGLE_BOARD.csv)：CH340N秋月116305、0805受動部品、3mm THT LED等の手はんだ前提。
+- [実測記録CSV](testboard/TEST_RECORD_TEMPLATE.csv)：2個体×左右端子×ケーブル2種×表裏の16試験条件。
+- [USB-UART試験スクリプト](testboard/tools/README.md)：Python/pyserial 3.5、RTS LED点滅とUART TXD-RXDループバック。
+- [製造元への加工確認事項](testboard/FAB_DFM_INQUIRY.md)：両端ゴールドフィンガー、60×50mm、0.17mmエッジクリアランス、加工公差。
+- **回路図/PCB/Gerber、KiCad 10 ERC/DRC、製造元承認、実機試験は未実施**。現行Rev.0.4のフットプリントそのものは変更しない。
 
 ## 2026-10-29 AnasMalas原設計の実験条件を再確認
 
