@@ -1,0 +1,8 @@
+Reference,Quantity,Description,Value,Footprint,Notes
+BT1,1,CR2032 battery holder,Keystone 103,Battery:BatteryHolder_Keystone_103_1x20mm,"THT 20mm coin cell holder; verify specific part physical fit"
+SW1-SW6,6,6x6mm momentary NO tact switch,SW_PUSH_6mm,Button_Switch_THT:SW_PUSH_6mm,"Four pins with two duplicated contacts"
+R1-R6,6,Axial resistor 1/4W,2.2k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"Current limit; red low current LED"
+D1-D6,6,3mm high-efficiency red LED,RED_LED,LED_THT:LED_D3.0mm,"Anode pad 2; cathode pad 1"
+J1-J2,2,PCB edge 14P USB2 receptacle,14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk,"Built into PCB edge; no mounted connector part"
+J3-J4,2,PCB edge 10P simplified power receptacle,10P,USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk,"Built into PCB edge; nonstandard power-only profile"
+CELL,1,CR2032 coin cell,3V,-,"User supplied; insert only after visual short checks"
