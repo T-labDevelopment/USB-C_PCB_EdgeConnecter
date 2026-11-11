@@ -1,3 +1,5 @@
+> **旧案（優先採用対象外）**：この2灯直列ループ版は比較・履歴用です。現在の試作案は [6灯・信号別LED基板](../USB_C_Loop_Tester/README.md) です。USBケーブル挿入だけで点灯し、ボタンはありません。
+
 # USB-C PCB Edge CR2032 Cable-Insert LED Tester
 
 **Cable connection itself is the ON switch.** No pushbuttons or other operating switches.
