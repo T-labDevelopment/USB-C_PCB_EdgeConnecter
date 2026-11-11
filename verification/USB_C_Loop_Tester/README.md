@@ -1,35 +1,55 @@
-# CR2032 USB-C cable loop tester (draft)
+# USB-Cエッジコネクター 信号別LED導通検証基板（Rev.0.2）
 
-**Design**: 1 PCB, four integrated PCB-edge USB-C contacts (14P x2, 10P x2), two separately connected passive C-to-C USB cables. One CR2032, six pushbuttons, six 2.2k resistors, six low-current red LEDs.
+**採用案：ケーブルを挿すだけで該当するLEDが点灯。スイッチは設けません。**
 
-Press **only one button at a time**. Current flows:
-`CR2032 + → PUSH → 2.2k → source USB signal → C-to-C cable → return USB signal → LED anode → LED cathode → isolated return USB GND → C-to-C cable → source USB GND → CR2032 –`.
+- 1枚の基板に14Pエッジ端子×2（J1/J2）、10Pエッジ端子×2（J3/J4）。
+- CR2032×1、3mm高輝度・低電流赤色LED×6、22kΩ×6（いずれも手はんだしやすいTHT）。
+- 14P/10Pそれぞれに受動型・無通電USB-C⇔USB-Cケーブルを接続して判定。
+- FR-4、2層、板厚0.8mm、接点ENIG、暫定突出長6.2mm。USB接点部分にシルクなし。
 
-The receiving connector's GND network is **not connected to BAT_NEG on the PCB**. This is deliberate; it forces cable-ground continuity.
+## LEDと信号の対応
 
-| Button | LED | 2-pin port pair | Tests |
-| --- | --- | --- | --- |
-| SW1 | D1 | J1 ⇄ J2 (14P) | VBUS with GND return |
-| SW2 | D2 | J1 ⇄ J2 (14P) | CC1/CC2 using the active CC cable conductor, with GND return |
-| SW3 | D3 | J1 ⇄ J2 (14P) | USB D+, with GND return |
-| SW4 | D4 | J1 ⇄ J2 (14P) | USB D−, with GND return |
-| SW5 | D5 | J3 ⇄ J4 (10P) | VBUS with GND return |
-| SW6 | D6 | J3 ⇄ J4 (10P) | CC1/CC2 with GND return |
+| 系統 | LED | 確認する信号 | 同一機能として集約するパッド |
+|---|---|---|---|
+| 14P（J1⇄J2） | D1 | VBUS | A4/A9/B4/B9 |
+| 14P（J1⇄J2） | D2 | CC | A5(CC1)/B5(CC2) |
+| 14P（J1⇄J2） | D3 | D+ | A6/B6 |
+| 14P（J1⇄J2） | D4 | D− | A7/B7 |
+| 10P（J3⇄J4） | D5 | VBUS | A4/A9/B4/B9 |
+| 10P（J3⇄J4） | D6 | CC | A5(CC1)/B5(CC2) |
 
-- Source-side CC1 and CC2 are shorted to one test signal **only on this powerless cable tester**; receiver-side CC1/CC2 are similarly shorted to one LED. This fixture is **not** a normal compliant USB device or PD implementation.
-- 14P A6/B6 share one D+ net; A7/B7 share one D− net, by design for reverse-plug coverage.
-- All four connector GND pads at the source are tied to battery negative; receiver GND is isolated so a damaged cable ground interrupts the indicator.
-- If multiple LEDs illuminate for a single button, suspect an unintended short between conductors; if none illuminate, check battery/LED/polarity and cable position.
-- **The lights do not prove all individual redundant VBUS/GND pads work** or show low-resistance contact quality. Cable plug reversal on **each end individually** is mandatory to exercise CC orientation.
-- **NEVER attach a PC, USB charger, PD source, powered USB device, or external power** while CR2032 is fitted. Test **unpowered C-to-C cables only**. A cable carrying active electronics may not behave as an ordinary passive cable.
-- 2.2k current limiting resistor constrains short current to at most ~1.4mA with a fresh 3.0V cell. Red LED current roughly 0.2-0.6mA, dependent on LED and cell; low-current LED required. FDK CR2032 standard discharge current is 0.2mA; buttons are intended for momentary tests.
-- Intended PCB: FR-4 2 layers, nominal 0.8mm, ENIG, with 6.2mm edge tabs and no contact-zone silkscreen. Inner board can have normal component labels.
-- Footprint reference geometry and pin names are reused from the project's current USB_C_PCB_Edge library; standard device symbols are the canonical embedded Device/Switch definitions used by KiCad.
-- **Validation status**: native schematic generated, but KiCad 10 CLI/GUI and ERC/DRC have not been run. Do not order without PCB routing, mechanical fit and DRC.
-- Tests: press all 6 buttons with each cable orientation; for CC, flip **both ends**, one at a time. Record LED result and insertion depth.
+GND（A1/A12/B1/B12）は14Pと10Pで独立した**共通の帰路**として使います。基板内で戻り側GND（J2/J4）をBAT_NEGに直結していないため、ケーブルのGND経路が断線した場合は、その系統のLEDがまとめて消灯します。GNDだけの独立LEDは設けません。
 
-References:
-- Microchip USB Type-C pin signals: https://developerhelp.microchip.com/xwiki/bin/view/applications/usb/typec-features/cable-connector/
-- Richtek cable CC/VCONN wiring: https://www.richtek.com/Home/Design%20Support/Technical%20Document/AN056
-- FDK CR2032 datasheet: https://www.fdk.co.jp/battery/lithium/data_sheet/CR2032_Data-sheet.pdf
-- KiCad 10: https://www.kicad.org/blog/2026/10/KiCad-10.0.7-Release/
+**同じ機能の端子はLEDを共用**しますが、14Pと10Pでは検証対象が違うため、同じVBUSやCCであっても系統間でLEDを共用しません。片方のケーブルだけが接続されたときにもう一方の表示が点灯しないようにするためです。
+
+### 回路経路（各LED共通）
+
+`CR2032+ → R1～R6(各22k) → J1/J3側の該当信号 → C-Cケーブル → J2/J4側の該当信号 → D1～D6（アノード→カソード） → 戻り側GND → C-CケーブルのGND → CR2032−`
+
+接続した信号と共通GNDの両方に導通があれば、対応するLEDだけが点灯します。抜けば消灯します。2本同時接続時には最大6灯が点灯します。
+
+## 判定上の制限
+
+- 表裏のA/B端子や複数VBUS・GND端子を並列接続しているため、**同一信号群内の個別パッド1個の断線は判別できない場合があります**。
+- CCは一般のC-Cケーブルで1本の有効信号線です。A5/B5の両方をこの**無電源ケーブル検証専用基板**では意図的にまとめています。実製品のUSB-CデバイスではCC1とCC2を直結せず、規格どおりの終端を使用してください。
+- LED点灯は簡易導通確認であり、接触抵抗の定量評価、隣接信号短絡の網羅的検出、USB2.0列挙、USB PD、ESP32の書き込み成功を保証しません。
+- ケーブルの**両端をそれぞれ反転**して、点灯の変化と接触安定性を確認してください。
+
+## 電源・安全
+
+22kΩで赤色LED順方向電圧を約1.8Vと仮定すると、1灯あたり約0.055mA、6灯で合計約0.33mAです（**計算上の参考値で実測ではありません**）。CR2032の標準連続負荷0.2mAより大きいため、挿入試験は短時間とし、使用後はケーブルを抜いて消灯させてください。低電流でも見える赤色LEDの部品選定・光量は実機確認対象です。
+
+**この基板は外部のUSB機器に接続できません。** CR2032による電圧をUSB端子に出す検証治具です。PC、充電器、モバイルバッテリー、給電中のUSB機器、アクティブケーブル等に接続しないでください。無通電の受動型C-Cケーブルのみを試験対象とします。
+
+## 製造・動作検証状態
+
+- KiCad回路図、PCB内の部品配置とパッドのネット割当、BOMを更新しました。
+- PCBは**配線未実施（銅箔配線セグメント0件）**です。このデータをそのまま製造してもLEDは動作しません。
+- KiCad 10実環境のERC/DRC、外形の接続、製造データ、嵌合・導通・光量確認は未実施。
+- GND接点とEdge.Cutsとの約0.17mmクリアランスについて、基板メーカーの加工承認が必要です。
+- 旧来の2灯直列方式は `../USB_C_Loop_Tester_Series/`、スイッチ付き案はGit履歴で参照できます。
+
+## 参考
+- USB Type-C規格資料：https://www.usb.org/documents
+- Panasonic CR2032（3V、標準負荷0.2mA）：https://energy.panasonic.com/jp/business/products/lithium/coin-cr-standard/models/CR2032
+- PCBエッジ方式先行例：https://github.com/AnasMalas/pcb-edge-usb-c
