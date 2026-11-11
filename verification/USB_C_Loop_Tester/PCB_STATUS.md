@@ -2,7 +2,7 @@
 
 `USB_C_Loop_Tester.kicad_pcb` is the **native KiCad PCB placement draft**. Four USB-C board-edge footprints are embedded using the existing 0.8mm design, and 6 switches + 6 current-limiting resistors + 6 LEDs + one Keystone 103 CR2032 THT holder are placed using the KiCad-standard libraries' full original pad/graphics definitions.
 
-- Body outline: X=20..107mm, Y=10..94mm; four edge tabs protrude on left/right.
+- Body outline: X=20..107mm, Y=10..105mm; four edge tabs protrude on left/right.
 - Edge.Cuts lines are intended to join the four embedded connector outlines at their open shoulders.
 - Connector assignments: J1 left 14P source, J2 right 14P LED return, J3 left 10P source, J4 right 10P LED return.
 - PCB soldermask and copper contacts are the existing connector footprints with no added contact-zone silkscreen.
@@ -11,3 +11,7 @@
 - Legacy official KiCad footprint graphic/pad geometry is converted into KiCad's modern footprint syntax on this board while keeping the pad dimensions and relative coordinates.
 - **The entire physical placement remains provisional**: the true Keystone 103 holder size, body and label overlaps, edge interference, hole tolerances, copper clearance to Edge.Cuts, mask, and KiCad GUI import must be checked.
 - Electrical details: see README.md in this directory.
+
+## 2026-11-12 placement revision
+
+BT1 moved to (76,90) mm to avoid routing interference with J4 (10P return) and its ground/signal escapes. Bottom of the core board extended from 94 to 105 mm. Including the four USB-C edge tabs, the PCB is approximately 99.4 × 95 mm; routing and KiCad DRC have not been completed.
