@@ -1,6 +1,4 @@
-(kicad_pcb (version 20240108) (generator "pcbnew") (generator_version "10.0") (version 20240108)
-(generator "pcbnew")
-(generator_version "10.0")
+(kicad_pcb (version 20240108) (generator "pcbnew") (generator_version "10.0")
 (general (thickness 0.8))
 (paper "A4")
 (title_block (title "USB-C PCB Edge CR2032 Loop Tester") (rev "0.1") (comment 1 "14P x2 and 10P x2, passive cable LED checks"))
