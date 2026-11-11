@@ -1,0 +1,8 @@
+Reference,Quantity,Value,Footprint
+J1 J2,2,USB-C PCB-edge 14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk
+J3 J4,2,USB-C PCB-edge 10P,USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk
+BT1,1,CR2032 THT holder,Battery:BatteryHolder_Keystone_103_1x20mm
+SW1 SW2,2,6mm momentary tactile,Button_Switch_THT:SW_PUSH_6mm
+R1 R2,2,2.2k 0.25W,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+D1 D2,2,Low-current red 3mm LED,LED_THT:LED_D3.0mm
+CR2032,1,CR2032 coin cell,external
