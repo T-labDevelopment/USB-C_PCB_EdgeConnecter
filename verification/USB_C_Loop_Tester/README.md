@@ -90,8 +90,8 @@ PCBは依然として銅箔配線がありません。KiCad 10によるERC/DRC�
 
 ## KiCad 10での開き方
 
-1. 配布した専用ZIPを**フォルダーごとすべて展開**してください。ZIP内のファイルを個別に開く必要はありません。
-2. `USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をダブルクリックするか、KiCad 10の「ファイル → プロジェクトを開く」から選択します。
+1. 現行Rev.0.6はGitHubの `feature/usb-c-external-cr2032-wire-pads` ブランチから取得します。`verification/USB_C_Loop_Tester/` 以下のファイルとライブラリをフォルダーごと保持してください。`verification/releases/` にある旧版ZIPはRev.0.6以前の履歴データです。
+2. `verification/USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をダブルクリックするか、KiCad 10の「ファイル → プロジェクトを開く」から選択します。
 3. 左のプロジェクトツリーで同名の `.kicad_sch`（回路図）と `.kicad_pcb`（基板）を選択します。
 4. `USB_C_PCB_Edge.kicad_sym`、`USB_C_PCB_Edge.pretty/`、`sym-lib-table`、`fp-lib-table` はプロジェクトに同梱されています。**フォルダー構成を変更しないでください**。標準のDevice/LED、Device/R、Device/Battery_Cell等のKiCad 10標準ライブラリは本体側が必要です。
 
