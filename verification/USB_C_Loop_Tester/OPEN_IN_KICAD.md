@@ -1,8 +1,8 @@
-# KiCad 10 プロジェクトの開き方 — Rev.0.5
+# KiCad 10 プロジェクトの開き方 — Rev.0.6
 
 > Rev.0.6: BT1は標準`Connector_Wire`フットプリントによる外付け2線給電。基板側にCH25専用ライブラリ登録は不要です。
 
-1. 最新のRev.0.5 ZIPを**フォルダーごと展開**します。
+1. GitHubの `feature/usb-c-external-cr2032-wire-pads` ブランチからリポジトリを取得し、`verification/USB_C_Loop_Tester/` の**フォルダー構成を維持**して使用します。`verification/releases/` の従来ZIPはRev.0.6反映前の履歴版なので混同しないでください。
 2. `USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をKiCad 10.x安定版で開きます。
 3. プロジェクトマネージャーから `.kicad_sch` と `.kicad_pcb` を開きます。
 4. `sym-lib-table`、`fp-lib-table`、`USB_C_PCB_Edge.kicad_sym`、`USB_C_PCB_Edge.pretty/` を移動・削除しないでください。
@@ -11,7 +11,7 @@
 CLIによるERC例（KiCad 10.x）：
 
 ```powershell
-kicad-cli sch erc --severity-all --exit-code-violations -o erc_rev05.rpt USB_C_Loop_Tester.kicad_sch
+kicad-cli sch erc --severity-all --exit-code-violations -o erc_rev06.rpt USB_C_Loop_Tester.kicad_sch
 ```
 
 **注意：** PCBはまだ配線0本でDRCは未実施、実機も未検証です。回路図が開けることと製造・動作可能であることは別です。
