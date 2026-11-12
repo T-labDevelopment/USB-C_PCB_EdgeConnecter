@@ -1,5 +1,7 @@
 # KiCad 10 プロジェクトの開き方 — Rev.0.5
 
+> Rev.0.6: BT1は標準`Connector_Wire`フットプリントによる外付け2線給電。基板側にCH25専用ライブラリ登録は不要です。
+
 1. 最新のRev.0.5 ZIPを**フォルダーごと展開**します。
 2. `USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をKiCad 10.x安定版で開きます。
 3. プロジェクトマネージャーから `.kicad_sch` と `.kicad_pcb` を開きます。
