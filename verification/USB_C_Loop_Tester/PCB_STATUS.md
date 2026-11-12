@@ -1,3 +1,19 @@
+# PCB STATUS — Rev.0.7: 24 isolated connector contact LED/R branches
+
+**Current source files:** USB_C_Loop_Tester.kicad_sch / USB_C_Loop_Tester.kicad_pcb.
+
+- J1/J2: 14 distinct source-to-destination contact paths with R1-R14 and D1-D14.
+- J3/J4: 10 distinct contact paths with R15-R24 and D15-D24.
+- Total: 53 footprints, 146 pads, 50 named nets (24 SRC + 24 DST + BAT_POS/BAT_NEG), all per-pad USB nets separate.
+- External CR2032 BT1 moved to (31,18)mm and (35.2,18)mm. No on-board battery holder.
+- PCB tracks 0 / vias 0. **NOT ROUTED, NOT MANUFACTURABLE.**
+- Native KiCad 10 ERC/DRC and actual component/USB mating tests NOT RUN.
+- 0.17mm copper-to-edge issue still open. Cable-internal shorted VBUS/GND pins and USB2 absent B6/B7 limit interpretation.
+- Revision detail: [REV07_INDIVIDUAL_CONTACT_CIRCUIT.md](REV07_INDIVIDUAL_CONTACT_CIRCUIT.md).
+- The Rev.0.6 and earlier records below are history only and do not describe the current routed-net assignments.
+
+---
+
 # Rev.0.6: external CR2032 on two official KiCad solder-wire pads
 
 The board-mounted CH25-2032LF footprint and three NPTH peg holes were removed from BT1. Two KiCad Connector_Wire pads (pitch 4.2mm, drill 0.85mm) now connect an off-board CR2032 cell holder through two insulated wires. Pad1 BAT_POS, Pad2 BAT_NEG. Existing six-LED cable continuity circuit intact. Board copper routes: 0. KiCad ERC/DRC not executed.
