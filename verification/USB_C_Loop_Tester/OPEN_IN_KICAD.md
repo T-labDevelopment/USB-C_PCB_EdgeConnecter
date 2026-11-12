@@ -1,3 +1,21 @@
+# KiCad 10 プロジェクトの開き方 — Rev.0.5
+
+1. 最新のRev.0.5 ZIPを**フォルダーごと展開**します。
+2. `USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をKiCad 10.x安定版で開きます。
+3. プロジェクトマネージャーから `.kicad_sch` と `.kicad_pcb` を開きます。
+4. `sym-lib-table`、`fp-lib-table`、`USB_C_PCB_Edge.kicad_sym`、`USB_C_PCB_Edge.pretty/` を移動・削除しないでください。
+5. 回路図エディターのERCを実行し、エラー・警告の件数とレポートを記録します。
+
+CLIによるERC例（KiCad 10.x）：
+
+```powershell
+kicad-cli sch erc --severity-all --exit-code-violations -o erc_rev05.rpt USB_C_Loop_Tester.kicad_sch
+```
+
+**注意：** PCBはまだ配線0本でDRCは未実施、実機も未検証です。回路図が開けることと製造・動作可能であることは別です。
+
+---
+
 # KiCad 10 プロジェクトの開き方
 
 USB-C 14P/10Pの6灯式ケーブル導通検証基板です。

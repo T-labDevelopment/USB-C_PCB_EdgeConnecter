@@ -1,3 +1,16 @@
+# PCB STATUS — Rev.0.5 Unified 14P + 10P
+
+**Preferred circuit version:** Rev.0.5 (2026-11-12). 6 LED indicators, one per signal group, R1-R6 22k, CR2032. J1/J2=14P, J3/J4=10P. Cable insertion itself is the switch.
+
+- Schematic: 17 symbols, 74 pins, 16 connected nets, 85 wires, 18 junctions and 0 labels.
+- PCB: 17 footprints / 74 pads. Eight LED/resistor footprints adjusted and pad-position CSV updated. USB connector tabs and BT1 untouched.
+- **PCB routed copper segments: 0. NOT MANUFACTURABLE.** ERC/DRC and real cable/LED trials NOT RUN.
+- Static graph test and idealized cable presence/open-conductor test: PASS. This is not a KiCad-native ERC result.
+- Nominal FR4 thickness 0.8mm, 2 layers, ENIG, protruding tab 6.2mm provisional; copper-edge clearance ~0.17mm needs fabrication verification.
+
+All older rev entries below refer to historical files, not current schematic statistics.
+
+---
 # PCB STATUS — 6 automatic per-signal LEDs / Rev.0.3
 
 Current preferred prototype: J1/J2 14P, J3/J4 10P, CR2032, 6×LED, 6×22kΩ. No switch. LEDs are grouped by VBUS, CC, D+, D− on 14P and VBUS, CC on 10P. All signals use the respective cable's GND as a return.
