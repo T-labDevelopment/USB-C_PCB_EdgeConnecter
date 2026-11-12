@@ -1,5 +1,5 @@
 Reference,Quantity,Description,Value,Footprint,Notes
-BT1,1,CR2032 battery holder,CH25-2032LF,USB_C_Test_Parts:BatteryHolder_COMF_CH25_2032LF,"Akizuki 100706; THT 20mm pitch, 3 NPTH peg holes; verify lead polarity"
+BT1,1,Off-board CR2032 battery wiring interface,CR2032_EXT,Connector_Wire:SolderWire-0.25sqmm_1x02_P4.2mm_D0.65mm_OD1.7mm,"Two insulated leads soldered to pad 1 + and pad 2 -; CH25 optionally external wired; battery holder NOT PCB mounted"
 R1-R6,6,Axial 1/4W resistor,22k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"Each LED signal requires one resistor"
 D1-D6,6,High-efficiency low-current red LED 3mm,RED,LED_THT:LED_D3.0mm,"Anode pad 2, cathode pad 1; luminosity not verified at ~55uA"
 J1-J2,2,PCB edge 14P USB2 receptacle,14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk,"14P test loop; PCB-integral contacts"
