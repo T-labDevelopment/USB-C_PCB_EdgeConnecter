@@ -1,3 +1,9 @@
+# Rev.0.6: external CR2032 on two official KiCad solder-wire pads
+
+The board-mounted CH25-2032LF footprint and three NPTH peg holes were removed from BT1. Two KiCad Connector_Wire pads (pitch 4.2mm, drill 0.85mm) now connect an off-board CR2032 cell holder through two insulated wires. Pad1 BAT_POS, Pad2 BAT_NEG. Existing six-LED cable continuity circuit intact. Board copper routes: 0. KiCad ERC/DRC not executed.
+
+---
+
 # BT1 CH25-2032LF 変更 — 2026-11-12
 
 秋月電子100706／COMF CH25-2032LFを採用予定。BT1の旧Keystoneを専用COMFフットプリントへ置換、20mm離れたTHT端子2つ＋Ø1.9mm NPTH位置決め穴3つを反映。回路図の標準電池シンボルは維持、BOMとライブラリテーブルを更新。
