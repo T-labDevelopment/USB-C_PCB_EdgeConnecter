@@ -25,9 +25,6 @@
 (net 15 "SRC_T10_CC")
 (net 16 "DST_T10_CC")
 (footprint "USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk"
-(version 20240108)
-(generator "pcbnew")
-(generator_version "10.0")
 (layer "F.Cu")
 (at 20.635 29 0) (uuid "523cc731-c4b2-4500-8a08-000000000010")
 (descr "PCB edge USB-C receptacle; USB2/power pads only; 0.8mm nominal FR-4 board; no rear mount or silkscreen; mating unverified")
@@ -331,9 +328,6 @@
 	)
 )
 (footprint "USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk"
-(version 20240108)
-(generator "pcbnew")
-(generator_version "10.0")
 (layer "F.Cu")
 (at 106.365 29 180) (uuid "523cc731-c4b2-4500-8a08-000000000043")
 (descr "PCB edge USB-C receptacle; USB2/power pads only; 0.8mm nominal FR-4 board; no rear mount or silkscreen; mating unverified")
@@ -637,9 +631,6 @@
 	)
 )
 (footprint "USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk"
-(version 20240108)
-(generator "pcbnew")
-(generator_version "10.0")
 (layer "F.Cu")
 (at 20.635 74 0) (uuid "523cc731-c4b2-4500-8a08-000000000072")
 (descr "Experimental 10-contact USB-C power edge, NONSTANDARD versus USB Type-C Power-Only receptacle; 0.8mm PCB; no silk; fit unverified")
@@ -919,9 +910,6 @@
 	)
 )
 (footprint "USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk"
-(version 20240108)
-(generator "pcbnew")
-(generator_version "10.0")
 (layer "F.Cu")
 (at 106.365 74 180) (uuid "523cc731-c4b2-4500-8a08-00000000009d")
 (descr "Experimental 10-contact USB-C power edge, NONSTANDARD versus USB Type-C Power-Only receptacle; 0.8mm PCB; no silk; fit unverified")
