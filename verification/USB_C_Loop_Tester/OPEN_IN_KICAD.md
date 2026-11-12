@@ -18,7 +18,7 @@ kicad-cli sch erc --severity-all --exit-code-violations -o erc_rev06.rpt USB_C_L
 
 ---
 
-# KiCad 10 プロジェクトの開き方
+# 旧版ZIPの開き方（Rev.0.6では非推奨・履歴）
 
 USB-C 14P/10Pの6灯式ケーブル導通検証基板です。
 
