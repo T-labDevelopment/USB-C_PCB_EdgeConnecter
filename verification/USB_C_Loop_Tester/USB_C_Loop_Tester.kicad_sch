@@ -1,4 +1,4 @@
-(kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0") (uuid "9b13f422-281c-4c54-a018-000000000001") (paper "A3") (title_block (title "USB-C 14P + 10P cable continuity tester") (rev "0.5") (comment 1 "Signal-group LED indicators, CR2032; cable-insertion only, no direct source-return link")) (lib_symbols
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0") (uuid "9b13f422-281c-4c54-a018-000000000001") (paper "A3") (title_block (title "USB-C 14P + 10P cable continuity tester") (rev "0.6") (comment 1 "External CR2032 via BT1 wire pads; cable-insertion only")) (lib_symbols
 (symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
