@@ -1,3 +1,12 @@
+# BT1 CH25-2032LF 変更 — 2026-11-12
+
+秋月電子100706／COMF CH25-2032LFを採用予定。BT1の旧Keystoneを専用COMFフットプリントへ置換、20mm離れたTHT端子2つ＋Ø1.7mm NPTH位置決め穴3つを反映。回路図の標準電池シンボルは維持、BOMとライブラリテーブルを更新。
+
+**プラス端子は暫定割当で、メーカー図面から確定不可。現物テスター検査が必須。**
+**PCB配線0本。KiCad-native ERC/DRC 未実施。**
+
+---
+
 # PCB STATUS — Rev.0.5 Unified 14P + 10P
 
 **Preferred circuit version:** Rev.0.5 (2026-11-12). 6 LED indicators, one per signal group, R1-R6 22k, CR2032. J1/J2=14P, J3/J4=10P. Cable insertion itself is the switch.
