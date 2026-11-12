@@ -1,14 +1,15 @@
 # USB-C PCB Edge / KiCad 10 / Rev.0.4
 
-## USB-C 10P/14P信号別LED導通検証基板（製作中）
+## USB-C 10P/14P 個別接点LED導通検証基板（Rev.0.7、製作中）
 
-- [6灯・ケーブル接続時自動点灯の検証基板](verification/USB_C_Loop_Tester/README.md)を**優先試作案**とします。
-- 14P×2（VBUS/CC/D+/D−の4灯）、10P×2（VBUS/CCの2灯）、CR2032×1、22kΩ×6。GNDは系統ごとの共通帰路。
-- 同一機能の表裏接点はLEDを共用。14Pと10Pの系統をまたいだ共用はしません。スイッチはありません。
-- **実PCB配線は未完了**（部品配置・ネット割当のみ）。ERC/DRC・嵌合・LEDの点灯は未検証で、このまま製造しても動作しません。
-- 旧2灯直列版は比較用として[別ディレクトリ](verification/USB_C_Loop_Tester_Series/README.md)に残します。
+- [Rev.0.7 個別接点の検証基板](verification/USB_C_Loop_Tester/README.md)を現行作業版とします。
+- 14P×2に14系統、10P×2に10系統。CR2032×1、**24個の22kΩ抵抗＋24個のLED**で各USB-C接点を個別ネットへ配線します。電源BAT_POS/BAT_NEGのみ共通化。
+- 外付けCR2032給電を継続し、BT1は基板上の標準2線パッド。USB-Cの元のエッジ接点形状は維持します。
+- USB-Cケーブル内のVBUS/GND共通化により、LEDは1端子単位の良否保証ではありません。
+- **PCB配線0本。KiCad 10 ERC/DRC・嵌合・発光実測は未実施で、現状の基板は製造しても動作しません。**
+- 旧Rev.0.6の6灯基板は作業元ブランチに保管、2灯直列版は[比較用](verification/USB_C_Loop_Tester_Series/README.md)。
 
-
+### 以下はRev.0.6以前の検討履歴
 
 基板に直接形成するUSB Type-C受け口です。ESP32の組立時USB書き込み、および簡易電源を目的とします。シルク印刷による補強、後端取付端子、固定穴はありません。
 
