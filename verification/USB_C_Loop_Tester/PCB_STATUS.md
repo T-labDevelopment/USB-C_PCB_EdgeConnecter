@@ -15,3 +15,13 @@ Current preferred prototype: J1/J2 14P, J3/J4 10P, CR2032, 6×LED, 6×22kΩ. No 
 - J1/J2 are top schematic lane (14P); J3/J4 bottom (10P); battery and six resistors are in source supply bank and six LEDs in return bank.
 - Moved 12 physical components (R1-R6 and D1-D6) on the PCB for clearer source/receiver correspondence. J1-J4 and BT1 coordinates and footprints unchanged. Corresponding pad-position CSV updated.
 - Board copper routing remains **0 segments**. This is not a connected or manufacturable PCB. Native KiCad 10 load, ERC, DRC and functional tests have not been run.
+
+## 2026-11-12: ERC(2).rpt corrections
+
+Input KiCad ERC: 20 errors / 19 warnings: 18 open pins, 18 dangling wire endpoints, 2 undriven input-power pins, 1 Battery_Cell mismatch.
+
+Rev.0.4 schematic: 63 explicit wires; 18 junctions; no net labels. Supply and LED returns rerouted as pin-to-pin chains. Full project-only USB-C test fixture symbol variants use passive VBUS/GND pin types; original general-purpose USB-C symbols retained. Battery_Cell embedded from KiCad 10.x official-layout symbol data.
+
+Static connectivity graph check: 74 schematic pins == 74 PCB pads, in 16 net groups, 0 open pins, 0 mixed-net connections. Two signal lines cross without a junction (no electrical short).
+
+**Native KiCad 10 ERC NOT RUN, ERC0/Warn0 NOT CONFIRMED**. PCB has 0 routed copper tracks, no KiCad DRC or physical tests. Do not order as a functioning PCB.
