@@ -4,7 +4,7 @@
 (generator_version "10.0")
 (general (thickness 0.8))
 (paper "A4")
-(title_block (title "USB-C PCB Edge CR2032 Signal LED Tester") (rev "0.5") (comment 1 "Direct-wire schematic and grouped LED / resistor placement"))
+(title_block (title "USB-C PCB Edge CR2032 Signal LED Tester") (rev "0.6") (comment 1 "External CR2032 via BT1 two wire pads; 14P/10P grouped LED tester"))
 (layers (0 "F.Cu" signal) (31 "B.Cu" signal) (32 "B.Adhes" user) (33 "F.Adhes" user) (34 "B.Paste" user) (35 "F.Paste" user) (36 "B.SilkS" user) (37 "F.SilkS" user) (38 "B.Mask" user) (39 "F.Mask" user) (40 "Dwgs.User" user) (41 "Cmts.User" user) (42 "Eco1.User" user) (43 "Eco2.User" user) (44 "Edge.Cuts" user) (45 "Margin" user) (46 "B.CrtYd" user) (47 "F.CrtYd" user) (48 "B.Fab" user) (49 "F.Fab" user))
 (setup (pad_to_mask_clearance 0) (allow_soldermask_bridges_in_footprints no))
 (net 0 "")
