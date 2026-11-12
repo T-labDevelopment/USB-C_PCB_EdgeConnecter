@@ -4,8 +4,17 @@
 
 - 1枚の基板に14Pエッジ端子×2（J1/J2）、10Pエッジ端子×2（J3/J4）。
 - CR2032×1、3mm高輝度・低電流赤色LED×6、22kΩ×6（いずれも手はんだしやすいTHT）。
-- 14P/10Pそれぞれに受動型・e-marker非搭載・無通電の受動型USB-C⇔USB-Cケーブルを接続して判定。
+- 14P/10Pそれぞれにe-marker非搭載・無通電の受動型USB-C⇔USB-Cケーブルを接続して判定。
 - FR-4、2層、板厚0.8mm、接点ENIG、暫定突出長6.2mm。USB接点部分にシルクなし。
+
+## KiCad 10での開き方
+
+1. 配布した専用ZIPを**フォルダーごとすべて展開**してください。ZIP内のファイルを個別に開く必要はありません。
+2. `USB_C_Loop_Tester/USB_C_Loop_Tester.kicad_pro` をダブルクリックするか、KiCad 10の「ファイル → プロジェクトを開く」から選択します。
+3. 左のプロジェクトツリーで同名の `.kicad_sch`（回路図）と `.kicad_pcb`（基板）を選択します。
+4. `USB_C_PCB_Edge.kicad_sym`、`USB_C_PCB_Edge.pretty/`、`sym-lib-table`、`fp-lib-table` はプロジェクトに同梱されています。**フォルダー構成を変更しないでください**。標準のDevice/LED、Device/R、Device/Battery_Cell等のKiCad 10標準ライブラリは本体側が必要です。
+
+**重要**：今回はKiCadが認識するプロジェクト構成とファイル構文を静的検査したものです。この環境ではKiCad 10の実行ファイルがなく、実際のGUI読み込みとERC/DRCには未着手です。またPCBは配線0本で、製造しても動作しません。
 
 ## LEDと信号の対応
 
