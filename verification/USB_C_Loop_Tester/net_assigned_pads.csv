@@ -3,6 +3,6 @@ J1,14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk,14
 J2,14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk,14
 J3,10P,USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk,10
 J4,10P,USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk,10
-BT1,CR2032,Battery:BatteryHolder_Keystone_103_1x20mm,2
+BT1,CR2032_EXTERNAL,Connector_Wire:SolderWire-0.25sqmm_1x02_P4.2mm_D0.65mm_OD1.7mm,2
 R1-R6,22k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,12
 D1-D6,RED,LED_THT:LED_D3.0mm,12
