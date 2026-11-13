@@ -1,3 +1,17 @@
+# 2026-11-13 Rev.0.7 B.Cu escape and BAT_NEG copper-return ECO
+
+**Branch:** `fix/usb-c-rev07-bcu-gnd-escape`
+
+- B.Cu 0.20mm straight escape tracks added to all 24 bottom-side connector pads, including 8 GND contact pads (B1/B12 across J1-J4).
+- Track start overlaps the intended pad; all escape ends pass beyond the latch keepout footprint X boundary, respecting dedicated individual nets.
+- **Battery negative is NOT USB GND.** USB GND contacts remain individually sensed through Rn, passive cable and Dn; no direct connection to `BAT_NEG`.
+- Added dedicated B.Cu `BAT_NEG_LED_RETURN` zone (net 2), intended to connect BT1-2 and all 24 LED cathode THT pads. Refill in KiCad and verify connection/thermal spokes.
+- PCB now contains 24 segments / 0 vias, 53 footprints / 146 pads, 50 nets, 17 zones (16 latch keepouts + 1 BAT_NEG).
+- Static mapping of all eight GND test routes and 24 B.Cu tracks checked; no KiCad 10 native ERC/DRC or zone fill performed. Remaining signal/positive routing is not finished; **NOT MANUFACTURABLE**.
+- [GND / B.Cu audit](REV07_BCU_GND_ESCAPE_FIX_2026-11-13.md) / [GND mapping](gnd_sense_map_rev07.csv).
+
+---
+
 # 2026-11-13: USB-C contact pads extended toward PCB body
 
 **Working branch**: `feature/usb-c-rev07-inboard-contact-extensions`
