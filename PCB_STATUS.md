@@ -1,13 +1,14 @@
-# Rev.0.7 Windows短パス配布版 — PCBステータス
+# PCB STATUS — Rev.0.7 B.Cu GND routing update 2026-11-13
 
-- Gitブランチ: `pkg-r07`。元の設計の専用コピーで、`main`とは未統合。
-- プロジェクトファイルはZIP最上位。旧CH25ホルダー用フットプリントと過去のリリースZIPは不含。
-- 14P J1/J2 14系統、10P J3/J4 10系統、専用抵抗24本とLED24個。
-- 4コネクターのUSB接点48パッドは内側に2.4mm延長、接点幅0.25mm・外側嵌合端は不変。
-- ラッチKeepout境界は局所Y=±3.375mm、GNDパッド外縁との距離0.5mm。
-- 基板：53フットプリント、146パッド、50ネット、銅配線0本。
-- `USB_C_PCB_Edge.pretty/` とPCB配置済みフットプリントは静的照合済み。CRCや実機試験済みとはしない。
-- KiCad 10 ERC/DRC未実施。GNDエッジ側の約0.17mm銅-Edge.Cuts距離も製造確認前。
-- **未配線・製造不可**（製造承認を受けていない）。
+- 53 footprints; 146 electrical pads; 50 named nets.
+- 24 x 0.20mm B.Cu pad escape segments, all on their exact assigned USB contact nets.
+- 0 vias. Existing 16 mechanical latch keepout zones retained.
+- One `BAT_NEG_LED_RETURN` B.Cu copper fill zone added on BAT_NEG net #2, **not** on USB-C GND sense nets.
+- The 25 pads intended to touch BAT_NEG zone: BT1-2 and 24x D1-D24 cathodes (pad1), all positioned within the zone polygon. Actual zone fill, spokes and electrical continuity are still unverified.
+- 8 GND test channels (16 physical USB GND pads) independently assigned to Rn / Dn and never tied directly to BAT_NEG.
+- Pad matching and B.Cu routing static audit PASS; native KiCad ERC/DRC NOT RUN.
+- Remaining positive and signal routing unfinished, resulting full PCB is **NOT READY FOR FABRICATION**.
+- Existing potential copper-to-edge clearance ~0.17mm and USB-C 0.8mm fit remain open.
+- Windows path-shortened distribution includes only current KiCad project data; no obsolete BatteryHolder_COMF file.
 
-設計変更履歴は同梱Rev.0.7各監査文書を参照。
+See [GND fix audit](REV07_BCU_GND_ESCAPE_FIX_2026-11-13.md).
