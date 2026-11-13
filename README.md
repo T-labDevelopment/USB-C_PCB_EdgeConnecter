@@ -1,5 +1,8 @@
 # USB-C PCB Edge / KiCad 10 / Rev.0.4
 
+> **Windows ZIP展開エラー0x80010135への対応**：GitHubの長いブランチZIPではなく、現行KiCadファイルだけをルート階層に置いた短パス配布ブランチ [pkg-r07](https://github.com/T-labDevelopment/USB-C_PCB_EdgeConnecter/archive/refs/heads/pkg-r07.zip) を使用してください。旧CH25電池ホルダー用フットプリントは現行回路で未使用のため除外済みです。ダウンロード後は `C:\PCB\` など短い場所へ展開してください。元の開発データと履歴はこのブランチに保存しています。
+
+
 ## USB-C 10P/14P 個別接点LED導通検証基板（Rev.0.7、製作中）
 
 - [Rev.0.7 個別接点の検証基板](verification/USB_C_Loop_Tester/README.md)を現行作業版とします。
