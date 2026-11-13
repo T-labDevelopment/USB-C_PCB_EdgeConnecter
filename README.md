@@ -9,6 +9,11 @@
 - **PCB配線0本。KiCad 10 ERC/DRC・嵌合・発光実測は未実施で、現状の基板は製造しても動作しません。**
 - 旧Rev.0.6の6灯基板は作業元ブランチに保管、2灯直列版は[比較用](verification/USB_C_Loop_Tester_Series/README.md)。
 
+### 2026-11-13: USB-C接点の基板内側延長（Rev.0.7更新）
+
+`feature/usb-c-rev07-inboard-contact-extensions` ブランチで14P/10Pの全48接点を内側に2.4mm延長しました。基板内側の配線開始点をラッチKeepoutから離し、外側の嵌合端を保持します。CADでの製造DRC・実物嵌合検証はまだ未実施。詳細：[接点延長記録](verification/USB_C_Loop_Tester/REV07_INBOARD_PAD_EXTENSION_2026-11-13.md)。
+
+
 ### 以下はRev.0.6以前の検討履歴
 
 基板に直接形成するUSB Type-C受け口です。ESP32の組立時USB書き込み、および簡易電源を目的とします。シルク印刷による補強、後端取付端子、固定穴はありません。
