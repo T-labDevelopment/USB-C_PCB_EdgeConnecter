@@ -1,3 +1,15 @@
+# 2026-11-13 Rev.0.7 USB-C latch keepout routing ECO
+
+**Git branch:** `fix/usb-c-rev07-latch-keepout-routing`
+
+- At A1/A12/B1/B12 the source pad's outer Y edge is ±2.875mm; old latch keepout starts at ±2.950mm (gap 0.075mm).
+- Move track-keepout inner Y edge only to ±3.375mm (gap **0.500mm**).
+- Applied to J1-J4 board footprints and both 14P/10P `.kicad_mod` libraries. Retained outer boundaries, pad geometry and keepout rules.
+- Source geometry and footprint counts checked; KiCad 10 ERC/DRC and actual route-start test **not yet run**. PCB copper track count remains **0**, not manufacturable.
+- Full audit: [REV07_LATCH_KEEPOUT_ROUTING_FIX_2026-11-13.md](REV07_LATCH_KEEPOUT_ROUTING_FIX_2026-11-13.md).
+
+---
+
 # PCB STATUS — Rev.0.7: 24 isolated connector contact LED/R branches
 
 **Current source files:** USB_C_Loop_Tester.kicad_sch / USB_C_Loop_Tester.kicad_pcb.
