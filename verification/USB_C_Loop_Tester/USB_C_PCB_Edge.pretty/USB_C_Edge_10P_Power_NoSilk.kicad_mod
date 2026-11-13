@@ -237,7 +237,7 @@
 		(min_thickness 0.15)
 		(keepout (tracks not_allowed) (vias not_allowed) (pads allowed) (copperpour not_allowed) (footprints allowed))
 		(fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
-		(polygon (pts (xy -6.835 2.950) (xy -0.635 2.950) (xy -0.635 4.500) (xy -6.835 4.500)))
+		(polygon (pts (xy -6.835 3.375) (xy -0.635 3.375) (xy -0.635 4.500) (xy -6.835 4.500)))
 	)
 	(zone
 		(net 0)
@@ -250,7 +250,7 @@
 		(min_thickness 0.15)
 		(keepout (tracks not_allowed) (vias not_allowed) (pads allowed) (copperpour not_allowed) (footprints allowed))
 		(fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
-		(polygon (pts (xy -6.835 -4.500) (xy -0.635 -4.500) (xy -0.635 -2.950) (xy -6.835 -2.950)))
+		(polygon (pts (xy -6.835 -4.500) (xy -0.635 -4.500) (xy -0.635 -3.375) (xy -6.835 -3.375)))
 	)
 	(zone
 		(net 0)
@@ -263,7 +263,7 @@
 		(min_thickness 0.15)
 		(keepout (tracks not_allowed) (vias not_allowed) (pads allowed) (copperpour not_allowed) (footprints allowed))
 		(fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
-		(polygon (pts (xy -6.835 2.950) (xy -0.635 2.950) (xy -0.635 4.500) (xy -6.835 4.500)))
+		(polygon (pts (xy -6.835 3.375) (xy -0.635 3.375) (xy -0.635 4.500) (xy -6.835 4.500)))
 	)
 	(zone
 		(net 0)
@@ -276,6 +276,6 @@
 		(min_thickness 0.15)
 		(keepout (tracks not_allowed) (vias not_allowed) (pads allowed) (copperpour not_allowed) (footprints allowed))
 		(fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
-		(polygon (pts (xy -6.835 -4.500) (xy -0.635 -4.500) (xy -0.635 -2.950) (xy -6.835 -2.950)))
+		(polygon (pts (xy -6.835 -4.500) (xy -0.635 -4.500) (xy -0.635 -3.375) (xy -6.835 -3.375)))
 	)
 )
