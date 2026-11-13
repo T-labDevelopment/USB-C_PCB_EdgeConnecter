@@ -1,7 +1,0 @@
-Reference,Quantity,Value,Footprint,Notes
-J1 J2,2,PCB edge USB-C 14P,USB_C_PCB_Edge:USB_C_Edge_14P_USB2_NoSilk,Board integral contacts
-J3 J4,2,PCB edge USB-C 10P,USB_C_PCB_Edge:USB_C_Edge_10P_Power_NoSilk,Simplified nonstandard Power-Only variant
-BT1,1,CR2032 THT holder,Battery:BatteryHolder_Keystone_103_1x20mm,Actual holder compatibility to verify
-R1 R2,2,2.2k 1/4W,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,Limits indicator current
-D1 D2,2,Low-current red 3mm LED,LED_THT:LED_D3.0mm,Pad 2 is anode
-CR2032,1,3V coin cell,-,Remove cables between tests to prevent continuous consumption
