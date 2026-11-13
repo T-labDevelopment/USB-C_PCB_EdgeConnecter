@@ -1,3 +1,18 @@
+# 2026-11-13: USB-C contact pads extended toward PCB body
+
+**Working branch**: `feature/usb-c-rev07-inboard-contact-extensions`
+
+- J1-J4 all 48 USB-C contact pads now extend **2.4mm inward**, with the original mating/tip endpoints unchanged.
+- Contact pad inner end moved from footprint-local X=-2.385mm to X=+0.015mm, 0.65mm beyond the last latch keepout X=-0.635mm.
+- F.Cu/B.Cu widths remain 0.25mm, nearest pad gap 0.25mm, 0.20mm configured board clearance. Electrical net assignments are unchanged.
+- Libraries 14P+10P, board instances and pad_positions.csv all match. Static checks PASS.
+- Keepout rules (tracks/vias/pours blocked), 0.8mm PCB, edge geometry, 24 LEDs/24 resistors unchanged.
+- WARNING: mask opening grows with the pads; physical mating/ENIG/mask web testing not completed.
+- Board tracks=0 and no native KiCad 10 ERC/DRC. **NOT MANUFACTURING APPROVED**.
+- [Source geometry audit](REV07_INBOARD_PAD_EXTENSION_2026-11-13.md).
+
+---
+
 # 2026-11-13 Rev.0.7 USB-C latch keepout routing ECO
 
 **Git branch:** `fix/usb-c-rev07-latch-keepout-routing`
