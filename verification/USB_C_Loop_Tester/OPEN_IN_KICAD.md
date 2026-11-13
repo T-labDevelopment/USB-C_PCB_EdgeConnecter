@@ -1,5 +1,8 @@
 # KiCad 10 プロジェクトの開き方 — Rev.0.7
 
+> **Windows ZIP展開エラー0x80010135への対応**：GitHubの長いブランチZIPではなく、現行KiCadファイルだけをルート階層に置いた短パス配布ブランチ [pkg-r07](https://github.com/T-labDevelopment/USB-C_PCB_EdgeConnecter/archive/refs/heads/pkg-r07.zip) を使用してください。旧CH25電池ホルダー用フットプリントは現行回路で未使用のため除外済みです。ダウンロード後は `C:\PCB\` など短い場所へ展開してください。元の開発データと履歴はこのブランチに保存しています。
+
+
 > Rev.0.7: 各USB-C端子を独立ネットへ変更。BT1は標準`Connector_Wire`フットプリントによる外付け2線給電。基板側にCH25専用ライブラリ登録は不要です。
 
 1. GitHubの `feature/usb-c-individual-pad-led-rev07` ブランチからリポジトリを取得し、`verification/USB_C_Loop_Tester/` の**フォルダー構成を維持**して使用します。`verification/releases/` の従来ZIPはRev.0.7反映前の履歴版なので混同しないでください。
