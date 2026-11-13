@@ -1,0 +1,9 @@
+Channel,Group,SourceConnector,SourcePad,SourceSenseNet,Resistor,DestinationConnector,DestinationPad,DestinationSenseNet,LED,CommonReturn,PCBSourcePadLayer,PCBDestinationPadLayer,SourceEscape,DestinationEscape
+1,14P,J1,A1GND,SRC_J1_A1GND,R1,J2,A1GND,DST_J2_A1GND,D1,BAT_NEG (via D cathode ONLY),F.Cu,F.Cu,No added trace,No added trace
+7,14P,J1,A12GND,SRC_J1_A12GND,R7,J2,A12GND,DST_J2_A12GND,D7,BAT_NEG (via D cathode ONLY),F.Cu,F.Cu,No added trace,No added trace
+8,14P,J1,B1GND,SRC_J1_B1GND,R8,J2,B1GND,DST_J2_B1GND,D8,BAT_NEG (via D cathode ONLY),B.Cu,B.Cu,B.Cu straight 0.2mm,B.Cu straight 0.2mm
+14,14P,J1,B12GND,SRC_J1_B12GND,R14,J2,B12GND,DST_J2_B12GND,D14,BAT_NEG (via D cathode ONLY),B.Cu,B.Cu,B.Cu straight 0.2mm,B.Cu straight 0.2mm
+15,10P,J3,A1GND,SRC_J3_A1GND,R15,J4,A1GND,DST_J4_A1GND,D15,BAT_NEG (via D cathode ONLY),F.Cu,F.Cu,No added trace,No added trace
+19,10P,J3,A12GND,SRC_J3_A12GND,R19,J4,A12GND,DST_J4_A12GND,D19,BAT_NEG (via D cathode ONLY),F.Cu,F.Cu,No added trace,No added trace
+20,10P,J3,B1GND,SRC_J3_B1GND,R20,J4,B1GND,DST_J4_B1GND,D20,BAT_NEG (via D cathode ONLY),B.Cu,B.Cu,B.Cu straight 0.2mm,B.Cu straight 0.2mm
+24,10P,J3,B12GND,SRC_J3_B12GND,R24,J4,B12GND,DST_J4_B12GND,D24,BAT_NEG (via D cathode ONLY),B.Cu,B.Cu,B.Cu straight 0.2mm,B.Cu straight 0.2mm
