@@ -2286,4 +2286,5 @@
 (segment (start 106.565 73.25) (end 103.825 73.25) (width 0.2) (layer "B.Cu") (net 46) (uuid "a710ea50-cafe-4aaa-9a10-000000000022"))
 (segment (start 106.565 75.25) (end 103.825 75.25) (width 0.2) (layer "B.Cu") (net 48) (uuid "a710ea50-cafe-4aaa-9a10-000000000023"))
 (segment (start 106.565 76.75) (end 103.825 76.75) (width 0.2) (layer "B.Cu") (net 50) (uuid "a710ea50-cafe-4aaa-9a10-000000000024"))
+(zone (net 2) (net_name "BAT_NEG") (layer "B.Cu") (uuid "bba7c3ed-bc10-4e3e-907e-4b8de0f71a10") (name "BAT_NEG_LED_RETURN") (hatch edge 0.5) (priority 0) (connect_pads (clearance 0.2) (thermal_relief_gap 0.3) (thermal_relief_width 0.3)) (min_thickness 0.25) (fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3)) (polygon (pts (xy 20.8 10.8) (xy 106.2 10.8) (xy 106.2 104.2) (xy 20.8 104.2))))
 )
