@@ -1,3 +1,16 @@
+## 2026-11-13 B.Cu配線・BAT_NEGゾーン検証上の追加手順
+
+現行の修正ブランチは `fix/usb-c-rev07-bcu-gnd-escape` です。J1～J4のB.Cu各接点から短い銅箔配線が24本追加されました。
+
+1. KiCad 10で基板を開く。
+2. `B`でゾーン再フィルを実行し、B.Cu `BAT_NEG_LED_RETURN` を生成する。
+3. すべてのUSB GND検査端子がBAT_NEGの銅箔面と直接導通していないこと、全LEDカソードとBT1-2がBAT_NEGになっていることを確認する。
+4. DRCを実行する。**未配線箇所が残っているため、DRCエラー0件と表記しない。**
+
+詳細は `REV07_BCU_GND_ESCAPE_FIX_2026-11-13.md` を参照。
+
+---
+
 # KiCad 10 プロジェクトの開き方 — Rev.0.7
 
 > **Windows ZIP展開エラー0x80010135への対応**：GitHubの長いブランチZIPではなく、現行KiCadファイルだけをルート階層に置いた短パス配布ブランチ [pkg-r07](https://github.com/T-labDevelopment/USB-C_PCB_EdgeConnecter/archive/refs/heads/pkg-r07.zip) を使用してください。旧CH25電池ホルダー用フットプリントは現行回路で未使用のため除外済みです。ダウンロード後は `C:\PCB\` など短い場所へ展開してください。元の開発データと履歴はこのブランチに保存しています。
